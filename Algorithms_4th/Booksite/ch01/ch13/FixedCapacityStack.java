@@ -33,11 +33,10 @@ public class FixedCapacityStack<Item> {
     }
 
     public Item pop() {
-        return a[--N];
         // avoids "loitering"
-        // Item item = a[--N];
-        // a[N] = null;
-        // return item;
+        Item item = a[--N];
+        a[N] = null;
+        return item;
     }
 
 

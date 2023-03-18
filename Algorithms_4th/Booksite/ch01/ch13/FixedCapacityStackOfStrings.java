@@ -3,12 +3,9 @@ import edu.princeton.cs.algs4.StdOut;
 
 /**
  * *
- * Compilation: ctr + B
- * Execution: ctr + E
- * Arguments:
- * *
  * Compilation: javac-algs4 FixedCapacityStackOfStrings.java
  * Execution: java-algs4 FixedCapacityStackOfStrings < tobe.txt
+ * *
  */
 
 public class FixedCapacityStackOfStrings {
@@ -32,11 +29,10 @@ public class FixedCapacityStackOfStrings {
     }
 
     public String pop() {
-        return a[--N];
         // avoids "loitering"
-        // String item = a[--N];
-        // a[N] = null;
-        // return item;
+        String item = a[--N];
+        a[N] = null;
+        return item;
     }
 
     public static void main(String[] args) {
