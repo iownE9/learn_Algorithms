@@ -36,3 +36,12 @@ Algorithms_4th/Booksite/Lib/*
 剑指Offer
 LeetCode
 算法导论
+Algorithms_4th/Code/alg*
+# 大文件
+shakespeare.txt
+*Result.txt
+# 练习
+ex*/
+# Assagement
+Algorithms_4th/Course1/week03/collinear/*.txt
+Algorithms_4th/Course1/week03/collinear/*.png

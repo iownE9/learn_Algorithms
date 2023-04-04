@@ -1,13 +1,11 @@
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
-import java.util.Objects;
-
 /******************************************************************************
  *
  *  Page:
  *  Compilation:  javac-algs4 DutchNationalFlag.java
- *  Execution:    java-algs4 DutchNationalFlag xxx
+ *  Execution:    java-algs4 DutchNationalFlag DutchNationalFlag.txt
  *  *
  *  Expectation:
  *  *
@@ -25,37 +23,31 @@ import java.util.Objects;
  ******************************************************************************/
 
 public class DutchNationalFlag {
-    private final String red = "red";       // 02
-    private final String white = "white";   // 03
-    private final String blue = "blue";     // 01
+    private final String RED = "red";
 
     private Pebble[] buckets;
-    private int loRed;
-    private int hiRed;
 
     public DutchNationalFlag(int N) {
         buckets = new Pebble[N];
     }
 
-    public void sortRWB() { // blue red white
-        int lo = 0, hi = buckets.length - 1;
-        String color1 = color(lo);
-        String color2 = color(hi);
+    public void sortBRW() { // Dijkstra
+        int b = 0, r = 0, w = buckets.length - 1;
+        if (w < 2) return;
 
-        while (!Objects.equals(color1, blue)) {
-            lo++;
-            color1 = color(lo);
+        while (r <= w) {
+            // while (color(w).compareTo(RED) > 0) w--;
+            // while (color(b).compareTo(RED) < 0) {
+            //     b++;
+            //     r++;
+            // }
+
+            int cmp = color(r).compareTo(RED);
+
+            if (cmp > 0) swap(r, w--);
+            else if (cmp < 0) swap(b++, r++);
+            else r++;
         }
-
-        while (!Objects.equals(color2, white)) {
-            hi--;
-            color2 = color(hi);
-        }
-
-        while (lo < hi) {
-
-        }
-
 
     }
 
@@ -79,7 +71,7 @@ public class DutchNationalFlag {
             if (!in.isEmpty())
                 dutchNationalFlag.buckets[i] = new Pebble(in.readString());
 
-        dutchNationalFlag.sortRWB();
+        dutchNationalFlag.sortBRW();
 
         for (Pebble item : dutchNationalFlag.buckets)
             StdOut.println(item);

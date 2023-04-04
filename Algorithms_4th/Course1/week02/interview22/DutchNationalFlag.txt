@@ -1,0 +1,8 @@
+7
+red
+white
+blue
+white
+blue
+red
+red

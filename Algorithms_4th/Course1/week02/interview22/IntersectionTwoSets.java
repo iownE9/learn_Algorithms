@@ -9,7 +9,7 @@ import edu.princeton.cs.algs4.StdOut;
  *  *
  *  Expectation:
  *  *
- *  Description:    Intersection of two sets.
+ *  Description:    Intersection of two sets. 交集
  *          Given two arrays a[] and b[], each containing n distinct 2D points in the plane,
  *          design a subQuadratic algorithm to count the number of points that
  *          are contained both in array a[] and array b[].
@@ -58,7 +58,7 @@ public class IntersectionTwoSets {
             for (int i = h; i < a.length; i++) {
                 int j = i;
                 Point2D item = a[j];
-                // // Error 性能bug 和 j 最终迭代到 <h, 执行a[j] = item; -> bug
+                // j 最终迭代到 <h, 执行a[j] = item; -> bug 漏了 else break
                 // for (; j >= h; j -= h)
                 //     if (item.compareTo(a[j - h]) < 0)
                 //         a[j] = a[j - h];

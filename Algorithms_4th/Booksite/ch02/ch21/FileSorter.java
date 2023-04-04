@@ -7,7 +7,7 @@ import java.io.File;
  *
  *  Page:   21ElementarySorts.pdf-7
  *  Compilation:  javac-algs4 FileSorter.java
- *  Execution:    java-algs4 FileSorter xxx
+ *  Execution:    java-algs4 FileSorter .
  *  *
  *  Expectation:
  *  *
