@@ -37,14 +37,10 @@ public class Ljx {
     }
 
     public static void main(String[] args) {
-        // for (int i = 0; i < 30; i++) {
-        //     StdOut.print(i + " ");
-        // }
-        // StdOut.println();
 
-        for (int i = 0; i < 80; i++) {
+        for (int i = 0; i < 80; i++) 
             tes();
-        }
+        
     }
 
     private static void tes() {
