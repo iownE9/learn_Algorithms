@@ -9,7 +9,7 @@ import edu.princeton.cs.algs4.StdOut;
  *  *
  *  Expectation: 494
  *  *
- *  Description:    Counting inversions.
+ *  Description:    Counting inversions. 2.2.19
  *      An inversion in an array a[] is a pair of entries a[i] and
  * a[j] such that i < j but a[i] > a[j]. Given an array, design a linearithmic
  * algorithm to count the number of inversions.

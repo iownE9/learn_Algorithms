@@ -10,7 +10,7 @@ import edu.princeton.cs.algs4.StdRandom;
  *  *
  *  Expectation:
  *  *
- *  Description:    Shuffling a linked list.
+ *  Description:    Shuffling a linked list. 2.2.18
  *      Given a singly-linked list containing n items, rearrange the items
  *  uniformly at random. Your algorithm should consume a logarithmic
  *  (or constant) amount of extra memory and run in time proportional to
@@ -27,6 +27,7 @@ public class ShufflingLinkedList {
             for (int lo = 0; lo < n - sz; lo = lo + sz + sz) {
                 int hi = Math.min(lo + sz + sz, n);
                 merge(nodes, sz, hi - lo);
+                // 在上一次基础上移动
                 nodes = move(nodes, hi - lo);
             }
         }
